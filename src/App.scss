@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: "Russo One", sans-serif;
+  color: #336699;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// payment
+
+.shadow {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0);
+  z-index: -100;
+}
+
+.shadow.visible {
+  background-color: rgb(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.payment-modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 540px;
+  top: -200vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  z-index: -200;
+  transition: ease-in-out 0.3s;
+}
+
+.payment-modal.visible {
+  top: 0;
+  background-color: #fff;
+  z-index: 200;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  &_title {
+    font-weight: 100;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(51, 102, 153);
+  }
+  &_name,
+  &_phone,
+  &_address,
+  &_email,
+  .card_number,
+  .card_valid,
+  .card_cvv {
+    font-family: "Russo One", sans-serif;
+    font-size: 14px;
+    color: #336699;
+    padding-left: 5px;
+    border: none;
+    border-bottom: 1px dashed rgb(51, 102, 153, 0.5);
+    outline: none;
+  }
+  &_error {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 12px);
+    height: 12px;
+    padding: 0 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: red;
+  }
+  &_card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 130px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(51, 102, 153, 0.25);
+    background-image: url(./assets/svg/credit-card.svg);
+    background-repeat: no-repeat;
+    background-position: 95% 5%;
+    background-size: 16%;
+  }
+  &_button {
+    font-family: "Russo One";
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 26px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #336899;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+  }
+}
+
+.payment_name::placeholder,
+.payment_phone::placeholder,
+.payment_address::placeholder,
+.payment_email::placeholder,
+.card_number::placeholder,
+.card_valid::placeholder,
+.card_cvv::placeholder {
+  color: rgb(51, 102, 153, 0.75);
+}
+
+.error_description {
+  color: rgb(51, 102, 153, 0.25);
+}
+
+.payment_card.visa {
+  background-image: url(./assets/svg/visa-card.svg);
+}
+
+.payment_card.master {
+  background-image: url(./assets/svg/master-card.svg);
+}
+
+.payment_card.union {
+  background-image: url(./assets/svg/union-card.svg);
+}
+
+.card_number {
+  margin-top: 16px;
+}
+
+.card_number,
+.card_valid,
+.card_cvv {
+  width: 100%;
+}
+
+.card_number::-webkit-outer-spin-button,
+.card_number::-webkit-inner-spin-button,
+.card_valid::-webkit-outer-spin-button,
+.card_valid::-webkit-inner-spin-button,
+.card_cvv::-webkit-outer-spin-button,
+.card_cvv::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.payment-notification {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 540px;
+  font-weight: 100;
+}
+
+.notification_title {
+  margin: 50px auto;
+  font-size: 20px;
+  font-weight: 100;
+  color: #33cc99;
+  border-bottom: 1px dotted #33cc99;;
+}
+
+.notification_subtitle {
+  margin: 50px auto;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.hidden {
+  display: none;
+}

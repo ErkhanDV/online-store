@@ -1,0 +1,404 @@
+.cart {
+  display: flex;
+  width: 100%;
+}
+
+.cart_products {
+  display: flex;
+  flex-direction: column;
+  width: calc(70% - 40px);
+  margin-left: 40px;
+}
+
+.cart_header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px dotted #33cc99;
+}
+
+.cart_title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #33cc99;
+}
+
+.cart_pagination {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.pagination_items {
+  width: 40px;
+  margin: 0 10px;
+  padding-left: 5px;
+  border: 1px dotted rgb(51, 204, 153);
+  outline: none;
+  font-family: "Russo One";
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #33cc99;
+}
+
+.pagination_pages {
+  display: flex;
+  align-items: center;
+}
+
+.pages_number {
+  display: flex;
+  align-items: center;
+}
+
+.cart_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted rgb(51, 204, 153, 0.2);
+}
+
+.cart-item_number {
+  width: 50px;
+  font-size: 20px;
+  text-align: center;
+  color: #33cc99;
+}
+
+.cart-item_image {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.cart-item_info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 10px;
+}
+
+.item-info_title {
+  margin-bottom: 0;
+  color: #33cc99;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.item-info_description {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 100;
+}
+
+.item-info_catalog {
+  position: relative;
+  padding-left: 14px;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.item-info_catalog::before {
+  position: absolute;
+  left: -6px;
+  top: -4px;
+  content: "stop";
+  font-family: "Material Symbols Outlined";
+  font-size: 20px;
+  font-weight: 200;
+  color: #33cc99;
+}
+
+.cart-item_amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  margin-left: auto;
+}
+
+.item-amount_count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.amount-count_button__remove,
+.amount-count_button__add {
+  font-family: "Material Symbols Outlined";
+  font-size: 32px;
+  color: #33cc99;
+  cursor: pointer;
+  user-select: none;
+  transition: ease-in-out 0.2s;
+}
+
+.amount-count_button__remove:hover,
+.amount-count_button__add:hover {
+  color: #336699;
+}
+
+.amount-count_value {
+  font-size: 20px;
+  color: #33cc99;
+}
+
+.cart_sum {
+  display: flex;
+  flex-direction: column;
+  width: calc(30% - 80px);
+  margin: 0 40px;
+}
+
+.cart_subtitle {
+  width: 100%;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #33cc99;
+  border-bottom: 1px dotted #33cc99;
+}
+
+.cart-sum_field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 10px;
+  border-bottom: 1px dotted rgb(51, 204, 153, 0.2);
+  text-transform: uppercase;
+}
+
+.cart-sum_field.accent {
+  background-color: rgb(51, 204, 153, 0.1);
+}
+
+.cart-sum_field.outdated {
+  position: relative;
+}
+
+.cart-sum_field.outdated::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 2px;
+  right: -5px;
+  top: 50%;
+  background-color: rgb(255, 0, 0, 0.75);
+  transform: rotate(175deg);
+}
+
+.products-count,
+.total-price {
+  margin-left: auto;
+  font-size: 24px;
+  color: #33cc99;
+}
+
+.cart-sum_input {
+  width: 100px;
+  padding-left: 5px;
+  border: 1px dotted rgb(51, 204, 153);
+  outline: none;
+  font-family: "Russo One";
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #33cc99;
+}
+
+.cart-sum_submit {
+  width: 50px;
+  font-family: "Russo One";
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #33cc99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.cart-sum_input::placeholder {
+  text-transform: none;
+  color: rgb(51, 204, 153, 0.5);
+}
+
+.cart-sum_promo {
+  font-size: 14px;
+  padding: 0 10px;
+  text-align: right;
+  color: rgb(51, 102, 153, 0.5);
+}
+
+.promo-list_title {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px dotted rgb(51, 204, 153, 0.25);
+}
+
+.promo-list_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: 1px dotted rgb(51, 102, 153, 0.25);
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: #33cc99;
+  background-color: rgb(51, 102, 153, 0.05);
+}
+
+.promo-item_button {
+  width: 54px;
+  font-family: "Russo One";
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #336699;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.promo-item_button:hover {
+  background-color: #33cc99;
+}
+
+.cart-sum_button {
+  font-family: "Russo One";
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 20px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(51, 204, 153, 0.75);
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.cart-sum_submit:hover,
+.cart-sum_button:hover {
+  background-color: #336699;
+}
+
+.hidden {
+  display: none;
+}
+
+.not-active {
+  background-color: rgb(51, 204, 153, 0.5);
+  &:hover {
+    cursor: default;
+    background-color: rgb(51, 204, 153, 0.5);
+  }
+}
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  align-items: center;
+}
+
+.notice_title {
+  font-size: 32px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.notice_image {
+  font-family: "Material Symbols Outlined";
+  font-size: 240px;
+  font-weight: 400;
+  color: rgb(51, 204, 153, 0.5);
+}
+
+.notice_button {
+  width: 200px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #336699;
+  cursor: pointer;
+  z-index: 100;
+  transition: ease-in-out 0.2s;
+}
+
+.notice_button:hover {
+  transform: scale(1.1);
+  background-color: #33cc99;
+}
+
+
+@media (max-width: 1280px) {
+  .cart {
+    flex-direction: column;
+  }
+
+  .cart_products {
+    width: calc(100% - 80px);
+    order: 1;
+  }
+
+  .cart_sum {
+    width: calc(100% - 80px);
+  }
+}
+
+@media (max-width: 760px) {
+  .cart_header {
+    flex-wrap: wrap;
+  }
+
+  .cart_pagination {
+    width: 100%;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+
+  .cart-item {
+    flex-direction: column;
+  }
+
+  .cart-item_number {
+    width: 100%;
+    text-align: left;
+  }
+
+  .cart-item_image {
+    width: 60%;
+    height: 60%;
+    margin: 0;
+  }
+
+  .cart-item_info {
+    width: 100%;
+  }
+
+  .cart-item_amount {
+    margin: 20px auto;
+  }
+}

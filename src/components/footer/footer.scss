@@ -1,0 +1,62 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  margin-top: auto;
+  border-top: 1px solid #f8f8f8;
+  background: rgb(51, 204, 153);
+  background: radial-gradient(
+    circle,
+    rgba(51, 204, 153, 0.5) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  &_authors {
+    text-align: center;
+    transition: ease-in-out 0.2s;
+    & a {
+      color: #33cc99;
+    }
+  }
+  &_copyright {
+    position: relative;
+    padding-left: 36px;
+    &::before {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      content: "copyright";
+      font-family: "Material Symbols Outlined";
+      font-size: 32px;
+      color: #33cc99;
+    }
+  }
+  &_school {
+    width: 80px;
+    height: 40px;
+    transition: ease-in-out 0.3s;
+    & path {
+      fill: #336699;
+      transition: ease-in-out 0.3s;
+    }
+    &:hover {
+      transform: scale(1.1);
+      & path {
+        fill: #33cc99;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding-top: 20px;
+  }
+
+  .footer_authors {
+    order: 1;
+  }
+}
